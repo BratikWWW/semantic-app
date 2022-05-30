@@ -1,0 +1,233 @@
+@prefix : <http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9> .
+
+<http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Название_кафедры
+:Название_кафедры rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Учится_на_специальности
+:Учится_на_специальности rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Факультет_специальности
+:Факультет_специальности rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Является_студентом_группы
+:Является_студентом_группы rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf owl:topObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Индекс_компетенции
+:Индекс_компетенции rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Курс
+:Курс rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Название_специальности
+:Название_специальности rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Семестр
+:Семестр rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Содержание_компетенции
+:Содержание_компетенции rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#ФИО_Студента
+:ФИО_Студента rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Факультет_Студента
+:Факультет_Студента rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Группа
+:Группа rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Дисциплина
+:Дисциплина rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Кафедра
+:Кафедра rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Компетенции
+:Компетенции rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#ОПК
+:ОПК rdf:type owl:Class ;
+     rdfs:subClassOf :Компетенции .
+
+
+###  http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#ПК
+:ПК rdf:type owl:Class ;
+    rdfs:subClassOf :Компетенции .
+
+
+###  http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Специальность
+:Специальность rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Студент
+:Студент rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#УК
+:УК rdf:type owl:Class ;
+    rdfs:subClassOf :Компетенции .
+
+
+###  http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Факульет
+:Факульет rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#ВМиК
+:ВМиК rdf:type owl:NamedIndividual ,
+               :Кафедра .
+
+
+###  http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#ИНЭК
+:ИНЭК rdf:type owl:NamedIndividual ,
+               :Факульет .
+
+
+###  http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Иванов_Иван_Иванович
+:Иванов_Иван_Иванович rdf:type owl:NamedIndividual ,
+                               :Студент ;
+                      :Учится_на_специальности :Программная_инженерия ;
+                      :Является_студентом_группы :ПМ-119 .
+
+
+###  http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Кафедра_философии
+:Кафедра_философии rdf:type owl:NamedIndividual ,
+                            :Кафедра .
+
+
+###  http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Математический_анализ
+:Математический_анализ rdf:type owl:NamedIndividual ,
+                                :Дисциплина ;
+                       :Название_кафедры :ВМиК .
+
+
+###  http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#ОНФ
+:ОНФ rdf:type owl:NamedIndividual ,
+              :Факульет .
+
+
+###  http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#ОПК-1
+:ОПК-1 rdf:type owl:NamedIndividual ,
+                :ОПК ;
+       :Индекс_компетенции "ОПК-1"^^xsd:string ;
+       :Содержание_компетенции "Способен проводить моделирование, анализ и совершенствование бизнес-процессов и информационно-технологической инфраструктуры предприятия в интересах достижения его стратегических целей с использованием современных методов и программного инструментария;"^^xsd:string .
+
+
+###  http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#ОПК-1.1
+:ОПК-1.1 rdf:type owl:NamedIndividual ,
+                  :ОПК ;
+         :Индекс_компетенции "ОПК-1.1"^^xsd:string ;
+         :Содержание_компетенции "Знать: методологию и инструментальные средства моделирования, анализа и оптимизации бизнес-процессов"^^xsd:string .
+
+
+###  http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#ПК-1
+:ПК-1 rdf:type owl:NamedIndividual ,
+               :ПК ;
+      :Индекс_компетенции "ПК-1"^^xsd:string ;
+      :Содержание_компетенции "Способен организовывать работы по созданию и редактированию контента, поддерживать процессы модернизации и продвижения сайта, анализировать информационные потребности посетителей сайта"^^xsd:string .
+
+
+###  http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#ПК-1.1
+:ПК-1.1 rdf:type owl:NamedIndividual ,
+                 :ПК ;
+        :Индекс_компетенции "ПК-1.1"^^xsd:string ;
+        :Содержание_компетенции "Знать: содержание и методы решения задач по созданию и редактированию контента, основные процессы и методы разработки веб-сайтов, основные понятия и методы поисковой оптимизации, терминологию и ключевые параметры веб-статистики, основные принципы и методы сбора статистики посещаемости веб-сайтов, популярные сервисы для сбора веб-статистики"^^xsd:string .
+
+
+###  http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#ПМ-119
+:ПМ-119 rdf:type owl:NamedIndividual ,
+                 :Группа .
+
+
+###  http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#ПРО-128
+:ПРО-128 rdf:type owl:NamedIndividual ,
+                  :Группа .
+
+
+###  http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Прикладная_матетматика
+:Прикладная_матетматика rdf:type owl:NamedIndividual ,
+                                 :Специальность ;
+                        :Факультет_специальности :ФИРТ ;
+                        :Название_специальности "Прикладная_математика"^^xsd:string .
+
+
+###  http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Программная_инженерия
+:Программная_инженерия rdf:type owl:NamedIndividual ,
+                                :Специальность ;
+                       :Факультет_специальности :ФИРТ ;
+                       :Название_специальности "Программная_инженерия"^^xsd:string .
+
+
+###  http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Степанов_Даниил_Петрович
+:Степанов_Даниил_Петрович rdf:type owl:NamedIndividual ,
+                                   :Студент ;
+                          :Учится_на_специальности :Прикладная_матетматика ;
+                          :Является_студентом_группы :ПРО-128 .
+
+
+###  http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#УК
+:УК rdf:type owl:NamedIndividual ,
+             :УК ;
+    :Индекс_компетенции "УК-1"^^xsd:string ;
+    :Содержание_компетенции "Способен осуществлять поиск, критический анализ и синтез информации, применять системный подход для решения поставленных задач"^^xsd:string .
+
+
+###  http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#УК-1.1
+:УК-1.1 rdf:type owl:NamedIndividual ,
+                 :УК ;
+        :Индекс_компетенции "УК-1.1"^^xsd:string ;
+        :Содержание_компетенции "Знать: методики поиска, сбора и обработки информации; актуальные российские и зарубежные источники информации в сфере профессиональной деятельности; метод системного анализа."^^xsd:string .
+
+
+###  http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#ФИРТ
+:ФИРТ rdf:type owl:NamedIndividual ,
+               :Факульет ;
+      :Факультет_Студента "ФИРТ"^^xsd:string .
+
+
+###  http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Философия
+:Философия rdf:type owl:NamedIndividual ,
+                    :Дисциплина ;
+           :Название_кафедры :Кафедра_философии .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

@@ -1,0 +1,202 @@
+[ {
+  "@id" : "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ]
+}, {
+  "@id" : "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#ВМиК",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Кафедра" ]
+}, {
+  "@id" : "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Группа",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Дисциплина",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#ИНЭК",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Факульет" ]
+}, {
+  "@id" : "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Иванов_Иван_Иванович",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Студент" ],
+  "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Учится_на_специальности" : [ {
+    "@id" : "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Программная_инженерия"
+  } ],
+  "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Является_студентом_группы" : [ {
+    "@id" : "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#ПМ-119"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Индекс_компетенции",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+}, {
+  "@id" : "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Кафедра",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Кафедра_философии",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Кафедра" ]
+}, {
+  "@id" : "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Компетенции",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Курс",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+}, {
+  "@id" : "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Математический_анализ",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Дисциплина" ],
+  "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Название_кафедры" : [ {
+    "@id" : "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#ВМиК"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Название_кафедры",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Название_специальности",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+}, {
+  "@id" : "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#ОНФ",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Факульет" ]
+}, {
+  "@id" : "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#ОПК",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Компетенции"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#ОПК-1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#ОПК" ],
+  "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Индекс_компетенции" : [ {
+    "@value" : "ОПК-1"
+  } ],
+  "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Содержание_компетенции" : [ {
+    "@value" : "Способен проводить моделирование, анализ и совершенствование бизнес-процессов и информационно-технологической инфраструктуры предприятия в интересах достижения его стратегических целей с использованием современных методов и программного инструментария;"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#ОПК-1.1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#ОПК" ],
+  "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Индекс_компетенции" : [ {
+    "@value" : "ОПК-1.1"
+  } ],
+  "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Содержание_компетенции" : [ {
+    "@value" : "Знать: методологию и инструментальные средства моделирования, анализа и оптимизации бизнес-процессов"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#ПК",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Компетенции"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#ПК-1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#ПК" ],
+  "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Индекс_компетенции" : [ {
+    "@value" : "ПК-1"
+  } ],
+  "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Содержание_компетенции" : [ {
+    "@value" : "Способен организовывать работы по созданию и редактированию контента, поддерживать процессы модернизации и продвижения сайта, анализировать информационные потребности посетителей сайта"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#ПК-1.1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#ПК" ],
+  "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Индекс_компетенции" : [ {
+    "@value" : "ПК-1.1"
+  } ],
+  "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Содержание_компетенции" : [ {
+    "@value" : "Знать: содержание и методы решения задач по созданию и редактированию контента, основные процессы и методы разработки веб-сайтов, основные понятия и методы поисковой оптимизации, терминологию и ключевые параметры веб-статистики, основные принципы и методы сбора статистики посещаемости веб-сайтов, популярные сервисы для сбора веб-статистики"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#ПМ-119",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Группа" ]
+}, {
+  "@id" : "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#ПРО-128",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Группа" ]
+}, {
+  "@id" : "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Прикладная_матетматика",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Специальность" ],
+  "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Название_специальности" : [ {
+    "@value" : "Прикладная_математика"
+  } ],
+  "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Факультет_специальности" : [ {
+    "@id" : "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#ФИРТ"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Программная_инженерия",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Специальность" ],
+  "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Название_специальности" : [ {
+    "@value" : "Программная_инженерия"
+  } ],
+  "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Факультет_специальности" : [ {
+    "@id" : "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#ФИРТ"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Семестр",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+}, {
+  "@id" : "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Содержание_компетенции",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+}, {
+  "@id" : "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Специальность",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Степанов_Даниил_Петрович",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Студент" ],
+  "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Учится_на_специальности" : [ {
+    "@id" : "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Прикладная_матетматика"
+  } ],
+  "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Является_студентом_группы" : [ {
+    "@id" : "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#ПРО-128"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Студент",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#УК",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#УК" ],
+  "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Индекс_компетенции" : [ {
+    "@value" : "УК-1"
+  } ],
+  "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Содержание_компетенции" : [ {
+    "@value" : "Способен осуществлять поиск, критический анализ и синтез информации, применять системный подход для решения поставленных задач"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Компетенции"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#УК-1.1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#УК" ],
+  "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Индекс_компетенции" : [ {
+    "@value" : "УК-1.1"
+  } ],
+  "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Содержание_компетенции" : [ {
+    "@value" : "Знать: методики поиска, сбора и обработки информации; актуальные российские и зарубежные источники информации в сфере профессиональной деятельности; метод системного анализа."
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Учится_на_специальности",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#ФИО_Студента",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+}, {
+  "@id" : "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#ФИРТ",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Факульет" ],
+  "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Факультет_Студента" : [ {
+    "@value" : "ФИРТ"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Факульет",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Факультет_Студента",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+}, {
+  "@id" : "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Факультет_специальности",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Философия",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Дисциплина" ],
+  "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Название_кафедры" : [ {
+    "@id" : "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Кафедра_философии"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/dmitry/ontologies/2022/1/untitled-ontology-9#Является_студентом_группы",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  } ]
+} ]

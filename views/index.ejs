@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./normalize.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Поиск данных для формирования учебного плана</title>
+  </head>
+  <body>
+    <header class="header">
+      <a href="#default" class="logo"
+        >Поиск данных для формирования учебного плана</a
+      >
+      <div class="header-right">
+        <a href="#home">Главная</a>
+        <a href="#about">Обо мне</a>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <div class="fgos-section">
+          <h2>Поиск ФГОС ВО:</h2>
+          <select class="select-directions">
+            <option selected value="">-----</option>
+            <% if (JSON.stringify(directions).length) { %> <%
+            directions.forEach((link) => { %>
+            <option><%= JSON.stringify(link.o.value) %></option>
+            <% }) %> <% } %>
+          </select>
+          <select>
+            <option selected>-----</option>
+            <option value="2">
+              09.03.02 Информационные системы и технологии
+            </option>
+            <option value="3">09.03.03 Прикладная информатика</option>
+            <option value="5">09.03.04 Программная инженерия</option>
+          </select>
+          <button>Поиск ФГОС</button>
+        </div>
+        <hr />
+        <div class="prof-section">
+          <h2>Поиск профессиональных стандартов:</h2>
+          <select>
+            <option value="1">01 ОБРАЗОВАНИЕ</option>
+            <option value="2">02 ЗДРАВООХРАНЕНИЕ</option>
+            <option value="3">03 СОЦИАЛЬНОЕ ОБСЛУЖИВАНИЕ</option>
+            <option value="4">04 КУЛЬТУРА, ИСКУССТВО</option>
+            <option value="5">05 ФИЗИЧЕСКАЯ КУЛЬТУРА И СПОРТ</option>
+          </select>
+          <select>
+            <option value="1">
+              01.001 Педагог (педагогическая деятельность в сфере дошкольного,
+              начального общего, основного общего, среднего общего образования)
+              (воспитатель, учитель)
+            </option>
+            <option value="2">
+              01.002 Педагог-психолог (психолог в сфере образования)
+            </option>
+            <option value="3">
+              01.003 Педагог дополнительного образования детей и взрослых
+            </option>
+            <option value="5">01.005 Специалист в области воспитания</option>
+          </select>
+          <button>Поиск профессиональных стандартов</button>
+        </div>
+        <hr />
+        <h2>Результаты поиска:</h2>
+      </div>
+    </main>
+    <script>
+      const selectDirections = document.querySelector(".select-directions");
+      async function setDirection() {
+        const form = new FormData();
+        form.append("direction", selectDirections.value);
+        const object = {};
+        form.forEach((value, key) => (object[key] = value));
+        const json = JSON.stringify(object);
+        console.log(json);
+        await fetch("/select-direction", {
+          method: "POST",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: json,
+        }).then(() => {
+          console.log("goood");
+        });
+      }
+      selectDirections.addEventListener(`change`, setDirection);
+    </script>
+  </body>
+</html>
