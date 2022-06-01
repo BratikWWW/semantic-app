@@ -26,7 +26,9 @@
             <option selected value="">-----</option>
             <% if (JSON.stringify(directions).length) { %> <%
             directions.forEach((link) => { %>
-            <option><%= JSON.stringify(link.o.value) %></option>
+            <option>
+              <%= JSON.stringify(link.o.value).split('/').slice(-1) %>
+            </option>
             <% }) %> <% } %>
           </select>
           <select>
@@ -35,9 +37,9 @@
               09.03.02 Информационные системы и технологии
             </option>
             <option value="3">09.03.03 Прикладная информатика</option>
-            <option value="5">09.03.04 Программная инженерия</option>
-          </select>
-          <button>Поиск ФГОС</button>
+            <option value="5">09.03.04 Программная инженерия</option></select
+          >;
+          <button>Поиск</button>
         </div>
         <hr />
         <div class="prof-section">
@@ -77,16 +79,14 @@
         const object = {};
         form.forEach((value, key) => (object[key] = value));
         const json = JSON.stringify(object);
-        console.log(json);
-        await fetch("/select-direction", {
+        const res = await fetch("/select-direction", {
           method: "POST",
           headers: {
             "content-type": "application/json",
           },
           body: json,
-        }).then(() => {
-          console.log("goood");
         });
+        console.log(await res.json());
       }
       selectDirections.addEventListener(`change`, setDirection);
     </script>
